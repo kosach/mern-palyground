@@ -1,0 +1,3 @@
+{
+    "mongoURI": "mongodb://test:321123@localhost/mern-test"
+}
