@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb://test:321123@localhost/mern-test"
+    "mongoURI": "mongodb://test:321123@localhost/mern-test",
+    "jwtToken": "mySecret"
 }

@@ -7,13 +7,14 @@ const app = express();
 connectDB();
 
 // Init Middleware
-app.use(express.json({extended: false}))
-app.get('/', (req, res)=> res.send('API running'))
+app.use(express.json({extended: false}));
+app.get('/', (req, res)=> res.send('API running'));
 
 // Define Routes
-app.use('/api/users', require('./server/users/users.route'));
-app.use('/api/auth', require('./server/auth/auth.route'));
-app.use('/api/tasks', require('./server/tasks/tasks.route'));
+app.use('/api/users', require('./server/components/user/user.route'));
+app.use('/api/users/auth', require('./server/components/user/auth.route'));
+app.use('/api/tasks', require('./server/components/task/task.route'));
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => console.log(`Server started on port: ${PORT}`))
+/* eslint-disable */
+app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
