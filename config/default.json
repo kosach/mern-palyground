@@ -1,4 +1,11 @@
 {
     "mongoURI": "mongodb://test:321123@localhost/mern-test",
+    "db": {
+        "username": "test",
+        "password": "321123",
+        "host": "localhost",
+        "database": "mern-test",
+        "port": 27017
+    },
     "jwtToken": "mySecret"
 }

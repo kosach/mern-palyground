@@ -1,0 +1,14 @@
+FROM node:12-alpine
+RUN apk add --no-cache --virtual .gyp \
+    python \
+    make \
+    g++ \
+    git \
+    bash
+WORKDIR /app
+COPY ./package*.json ./
+RUN npm install
+COPY . .
+RUN cd /app/client && npm install
+RUN cd /app ls
+CMD ["npm", "run", "dev"]
